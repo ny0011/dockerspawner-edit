@@ -4,7 +4,7 @@ if getent passwd $USER_ID > /dev/null ; then
   echo "$USER ($USER_ID) exists"
 else
   echo "Creating user $USER ($USER_ID)"
-  useradd -u 4000 -s $SHELL $USER
+  adduser $USER_ID -s $SHELL $USER
 fi
 
 
